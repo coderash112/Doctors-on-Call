@@ -1,26 +1,281 @@
-@import "tailwindcss";
-
+/* ======================================================
+   DESIGN TOKENS (GLOBAL – SAFE)
+====================================================== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-gradient: linear-gradient(135deg, #eef2ff, #f8fafc);
+  --panel: #ffffff;
+
+  --primary: #4f46e5;
+  --primary-dark: #3730a3;
+  --admin-dark: #111827;
+
+  --secondary: #e5e7eb;
+  --secondary-text: #111827;
+
+  --success: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+
+  --radius-lg: 16px;
+  --radius-md: 12px;
+
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-btn: 0 12px 30px rgba(79, 70, 229, 0.35);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ======================================================
+   RESET (SAFE)
+====================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text);
+}
+
+/* ======================================================
+   BASE BUTTON SYSTEM (NO COLORS HERE)
+====================================================== */
+.btn-primary,
+.btn-secondary {
+  appearance: none;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 22px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.btn-sticky {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+}
+
+/* ======================================================
+   LOGIN SCOPE
+====================================================== */
+.login-scope {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-scope .login-card {
+  width: 380px;
+  background: var(--panel);
+  padding: 36px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.login-scope h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.login-scope input {
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+
+.login-scope .btn-primary {
+  width: 100%;
+  color: white;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  box-shadow: var(--shadow-btn);
+}
+
+.login-scope .btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+/* ======================================================
+   CANDIDATE (ASSESSMENT) SCOPE
+====================================================== */
+.candidate-scope {
+  background: var(--bg-gradient);
+}
+
+.candidate-scope .exam-wrapper {
+  max-width: 920px;
+  margin: 110px auto 40px;
+  padding: 0 20px;
+}
+
+.candidate-scope .exam-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 14px 24px;
+  background: #111827;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  z-index: 1000;
+}
+
+.candidate-scope .exam-card {
+  background: var(--panel);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.candidate-scope .exam-option {
+  display: flex;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.candidate-scope .exam-option:hover {
+  background: #f1f5f9;
+}
+
+.candidate-scope .exam-paragraph {
+  background: #f9fafb;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.candidate-scope .exam-textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.candidate-scope .btn-primary {
+  color: white;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+}
+
+.candidate-scope .btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.candidate-scope .btn-secondary {
+  background: var(--secondary);
+  color: var(--secondary-text);
+}
+
+/* ======================================================
+   ADMIN DASHBOARD SCOPE
+====================================================== */
+.admin-scope {
+  background: #f9fafb;
+}
+
+.admin-scope .layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-scope .sidebar {
+  width: 220px;
+  background: #111827;
+  color: white;
+  padding: 24px;
+}
+
+.admin-scope .sidebar h2 {
+  margin-bottom: 24px;
+}
+
+.admin-scope .sidebar button {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.admin-scope .main {
+  flex: 1;
+  padding: 32px;
+}
+
+.admin-scope .btn-primary {
+  background: #111827;
+  color: white;
+}
+
+.admin-scope .btn-secondary {
+  background: #374151;
+  color: white;
+}
+
+/* ======================================================
+   RESULTS PAGE SCOPE
+====================================================== */
+.results-scope .results-wrapper {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+.results-scope .results-card {
+  background: var(--panel);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 28px;
+}
+
+.results-scope .results-header {
+  margin-bottom: 20px;
+}
+
+.results-scope table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.results-scope th {
+  text-align: left;
+  padding: 14px;
+  font-size: 13px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.results-scope td {
+  padding: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.results-scope tr:hover {
+  background: #f9fafb;
+}
+
+.results-scope .btn-secondary {
+  background: #374151;
+  color: white;
 }

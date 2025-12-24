@@ -1,0 +1,92 @@
+[
+  {
+    "category": "Respiratory Emergency",
+    "question": "A patient is gasping for air, unable to speak full sentences, and has bluish lips. What condition is most likely?",
+    "options": ["Mild anxiety", "Acute respiratory distress", "Seasonal allergy", "Upper respiratory infection"],
+    "answer": 1
+  },
+  {
+    "category": "Respiratory Emergency",
+    "question": "Which symptom indicates hypoxia?",
+    "options": ["Warm skin", "Cyanosis of lips and nails", "Mild cough", "Sneezing"],
+    "answer": 1
+  },
+  {
+    "category": "Respiratory Emergency",
+    "question": "Stridor is best described as:",
+    "options": ["A wheezing sound from lower lungs", "A high-pitched sound during inspiration", "Normal breathing sound", "Sound of coughing mucus"],
+    "answer": 1
+  },
+  {
+    "category": "Respiratory Emergency",
+    "question": "Which SpO₂ reading is considered critical?",
+    "options": ["98%", "95%", "92%", "88%"],
+    "answer": 3
+  },
+  {
+    "category": "Respiratory Emergency",
+    "question": "Orthopnea refers to:",
+    "options": ["Breathing difficulty while lying flat", "Breathing difficulty during exercise only", "Night-time coughing", "Sudden airway blockage"],
+    "answer": 0
+  },
+  {
+    "category": "Respiratory Emergency",
+    "question": "A choking patient who cannot cough or speak requires:",
+    "options": ["Water intake", "Immediate airway intervention", "Observation only", "Oral antibiotics"],
+    "answer": 1
+  },
+  {
+    "category": "Respiratory Emergency",
+    "question": "Hemoptysis means:",
+    "options": ["Vomiting blood", "Bleeding from nose", "Coughing up blood", "Blood in urine"],
+    "answer": 2
+  },
+  {
+    "category": "Respiratory Physiology",
+    "question": "Gas exchange primarily occurs in the:",
+    "options": ["Bronchi", "Trachea", "Alveoli", "Nasal cavity"],
+    "answer": 2
+  },
+  {
+    "category": "Respiratory Emergency",
+    "question": "Which condition is MOST time-critical?",
+    "options": ["Mild asthma controlled with inhaler", "Acute respiratory failure", "Seasonal cough", "Allergic rhinitis"],
+    "answer": 1
+  },
+  {
+    "category": "Respiratory Emergency",
+    "question": "Hypercapnia refers to:",
+    "options": ["Low oxygen levels", "High carbon dioxide levels", "Low blood pressure", "High blood sugar"],
+    "answer": 1
+  },
+  {
+    "category": "Respiratory Emergency",
+    "question": "What is the safest initial position for a patient in respiratory distress?",
+    "options": ["Lying flat", "Trendelenburg position", "Sitting upright", "Prone position"],
+    "answer": 2
+  },
+  {
+    "category": "Respiratory Emergency",
+    "question": "Bronchospasm results in:",
+    "options": ["Widening of airways", "Narrowing of airways", "Fluid overload", "Airway collapse"],
+    "answer": 1
+  },
+  {
+    "category": "Respiratory Emergency",
+    "question": "Which sign suggests impending respiratory failure?",
+    "options": ["Increased respiratory effort followed by fatigue", "Mild cough only", "Sneezing", "Stable breathing rate"],
+    "answer": 0
+  },
+  {
+    "category": "Respiratory Assessment",
+    "question": "Use of accessory muscles during breathing indicates:",
+    "options": ["Normal respiration", "Severe respiratory distress", "Good oxygenation", "Relaxed breathing"],
+    "answer": 1
+  },
+  {
+    "category": "Respiratory Emergency",
+    "question": "Which situation requires immediate emergency escalation?",
+    "options": ["Cough for 3 days", "Asthma relieved by inhaler", "Rapid breathing with altered consciousness", "Mild sore throat"],
+    "answer": 2
+  }
+]
