@@ -11,6 +11,7 @@ const CATEGORIES = [
   "Cardiac Arrest",
   "Seizure",
   "Headache",
+  "Respiratory Emergency"
 ];
 
 export default function DashboardPage() {
